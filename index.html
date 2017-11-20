@@ -1,37 +1,342 @@
-## Welcome to GitHub Pages
+<!DOCTYPE html>
+<html lang="en-US">
 
-You can use the [editor on GitHub](https://github.com/andyinnie/calculators/edit/master/index.md) to maintain and preview the content for your website in Markdown files.
+    <head>
+        <meta name="charset" content="UTF-8">
+        <meta name="author" content="Andrew Martinez">
+        <meta name="description" content="A simple web page with different specialized calculators">
+        <meta name="keywords" content="calculators, pythagorean theorem, area, circle, radius, circumference, volume, surface area, cone, cylinder, sphere, prism, trigonometry, sine, cosine, tangent, sin, cos, tan, quadratic, distance, midpoint">
+        <title>Calculators by Andrew Martinez</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="icon" href="https://maxcdn.icons8.com/Share/icon/Science//calculator1600.png" type="image/x-icon">
+        <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+        <script type="text/javascript" src="script.js"></script>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+        <!--Google Analytics thingy-->
+        <script>
+            (function(i, s, o, g, r, a, m) {
+                i['GoogleAnalyticsObject'] = r;
+                i[r] = i[r] || function() {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+                a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+                a.async = 1;
+                a.src = g;
+                m.parentNode.insertBefore(a, m)
+            })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
 
-### Markdown
+            ga('create', 'UA-105988822-1', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </head>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    <body>
+        <div id="menu">
+             <a href="#Geometry"><span class="menu-item">Geometry</span></a>
+             <a href="#Trigonometry"><span class="menu-item">Trigonometry</span></a>
+             <a href="#Algebra"><span class="menu-item">Algebra</span></a>
+             <a href="#Physics"><span class="menu-item">Physics</span></a>
+        </div>
+        <!-- I got these buttons from simplesharebuttons.com -->
+        <div id="share-buttons">
+            <p>Please share!</p>
 
-```markdown
-Syntax highlighted code block
+            <!-- Email -->
+            <a href="mailto:?Subject=Cool+Formula+Calculator+Website!&amp;Body=http://tinyurl.com/FormulaCalcs" target="_blank" title="Share by email">
+                <img src="https://simplesharebuttons.com/images/somacro/email.png" alt="Email" />
+            </a>
 
-# Header 1
-## Header 2
-### Header 3
+            <!-- Facebook -->
+            <a href="http://www.facebook.com/sharer.php?u=httphttp://tinyurl.com/FormulaCalcs" target="_blank" title="Share on Facebook">
+                <img src="https://simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" />
+            </a>
 
-- Bulleted
-- List
+            <!-- Google+ -->
+            <a href="https://plus.google.com/share?url=http://tinyurl.com/FormulaCalcs" target="_blank" title="Share on Google+">
+                <img src="https://simplesharebuttons.com/images/somacro/google.png" alt="Google" />
+            </a>
 
-1. Numbered
-2. List
+            <!-- Reddit -->
+            <a href="http://reddit.com/submit?url=http://tinyurl.com/FormulaCalcs&amp;title=Calculators+by+Andrew+Martinez" target="_blank" title="Share on Reddit">
+                <img src="https://simplesharebuttons.com/images/somacro/reddit.png" alt="Reddit" />
+            </a>
 
-**Bold** and _Italic_ and `Code` text
+            <!-- Twitter -->
+            <a href="https://twitter.com/share?url=http://tinyurl.com/FormulaCalcs&amp;text=Calculators%20by%20Andrew%20Martinez" target="_blank" title="Share on Twitter">
+                <img src="https://simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" />
+            </a>
 
-[Link](url) and ![Image](src)
-```
+        </div>
+        <noscript>
+            <div id="noscript-header">
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+                <img id="warning" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519791-101_Warning-128.png" alt="warning">
+                <p id="header-text">Sorry, you'll need JavaScript enabled on your browser to use these calculators.</p>
+            </div>
+        </noscript>
 
-### Jekyll Themes
+        <div id="content">
+            <a name="Geometry"></a>
+             <h2>Pythagorean Theorem</h2>
+            <!--<img id="right-triangle" src="http://emweb.unl.edu/Math/mathweb/trigonom/Image289.gif" title="Example of a right triangle">-->
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/andyinnie/calculators/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+             <h4 class="equation"><i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i></h4>
+            <p>a:
+                <input id="pythagA" type="number" placeholder="leg">
+            </p>
+            <p>b:
+                <input id="pythagB" type="number" placeholder="leg">
+            </p>
+            <button onclick="pythagSolve()" title="Calculate">Calculate</button>
+            <p id="pythagResult" class="result"></p>
 
-### Support or Contact
+             <h3>or alternatively,</h3>
+             <h4 class="equation"><i>b<sup>2</sup> = c<sup>2</sup> - a<sup>2</sup></i></h4>
+            <p>a:
+                <input id="pythagAltA" type="number" placeholder="leg">
+            </p>
+            <p>c:
+                <input id="pythagAltC" type="number" placeholder="hypotenuse">
+            </p>
+            <button onclick="pythagAltSolve()" title="Calculate">Calculate</button>
+            <p id="pythagAltResult" class="result"></p>
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+             <h2>Areas</h2>
+             <h3>Trapezoid</h3>
+             <h4 class="equation"><i>A = &frac12;(b<sub>1</sub> + b<sub>2</sub>)h</i></h4>
+            <p>b<sub>1</sub>:
+                <input id="areaTrapB1" type="number" placeholder="base">
+            </p>
+            <p>b<sub>2</sub>:
+                <input id="areaTrapB2" type="number" placeholder="base">
+            </p>
+            <p>h:
+                <input id="areaTrapH" type="number" placeholder="height">
+            </p>
+            <button onclick="areaTrapSolve()" title="Calculate">Calculate</button>
+            <p id="areaTrapResult" class="result"></p>
+
+             <h3>Circle</h3>
+             <h4 class="equation"><i>A = &Pi;r<sup>2</sup></i></h4>
+            <p>r:
+                <input id="areaCircleR" type="number" placeholder="radius">
+            </p>
+            <button onclick="areaCircleSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="areaCircleSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="areaCircleSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <!--these three buttons appear on the same line (a surprise to be sure, but a welcome one)(haha, memes)-->
+            <p id="areaCircleResult" class="result"></p>
+
+             <h4>also, Circumference of a Circle</h4>
+             <h4 class="equation"><i>C = 2&Pi;r</i></h4>
+            <p>r:
+                <input id="perimCircleR" type="number" placeholder="radius">
+            </p>
+            <button onclick="perimCircleSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="perimCircleSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="perimCircleSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="perimCircleResult" class="result"></p>
+
+             <h3>Radius of a Circle From Circumference</h3>
+             <h4 class="equation"><i>r = <sup>C</sup>&frasl;<sub>2&Pi;</sub></i></h4>
+            <p>C:
+                <input id="radiusFromPerimC" type="number" placeholder="circumference">
+            </p>
+            <button onclick="radiusFromPerimSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="radiusFromPerimSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="radiusFromPerimSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="radiusFromPerimResult" class="result"></p>
+
+             <h3>Radius of a Circle From Area</h3>
+             <h4 class="equation"><i>r = &radic;<sup>A</sup>&frasl;<sub>&Pi;</sub></i></h4>
+            <p>A:
+                <input id="radiusFromAreaA" type="number" placeholder="area">
+            </p>
+            <button onclick="radiusFromAreaSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="radiusFromAreaSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="radiusFromAreaSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="radiusFromAreaResult" class="result"></p>
+
+             <h2>Volumes & Surface Areas</h2>
+            	<h3>Cone</h3>
+            	<h4 class="equation"><i>V = &frac13;&Pi;r<sup>2</sup>h, SA = &Pi;r<sup>2</sup> + &Pi;r&radic;(r<sup>2</sup> + h<sup>2</sup>)</i></h4>
+            <p>r:
+                <input id="vsaConeR" type="number" placeholder="radius">
+            </p>
+            <p>h:
+                <input id="vsaConeH" type="number" placeholder="height">
+            </p>
+            <button onclick="vsaConeSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="vsaConeSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="vsaConeSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="vsaConeResult" class="result"></p>
+
+            	<h3>Cylinder</h3>
+            	<h4 class="equation"><i>V = &Pi;r<sup>2</sup>h, SA = 2&Pi;r<sup>2</sup> + 2&Pi;rh</i></h4>
+            <p>r:
+                <input id="vsaCylR" type="number" placeholder="radius">
+            </p>
+            <p>h:
+                <input id="vsaCylH" type="number" placeholder="height">
+            </p>
+            <button onclick="vsaCylSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="vsaCylSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="vsaCylSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="vsaCylResult" class="result"></p>
+
+            	<h3>Sphere</h3>
+            	<h4 class="equation"><i>V = <sup>4</sup>&frasl;<sub>3</sub>&Pi;r<sup>3</sup>, SA = 4&Pi;r<sup>2</sup></i></h4>
+            <p>r:
+                <input id="vsaSphereR" type="number" placeholder="radius">
+            </p>
+            <button onclick="vsaSphereSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="vsaSphereSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="vsaSphereSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="vsaSphereResult" class="result"></p>
+
+             <h3>Hemisphere</h3>
+             <h4 class="equation"><i>V = <sup>2</sup>&frasl;<sub>3</sub>&Pi;r<sup>3</sup>, SA = 3&Pi;r<sup>2</sup></i></h4>
+            <p>r:
+                <input id="vsaHemiR" type="number" placeholder="radius">
+            </p>
+            <button onclick="vsaHemiSolvePI()" title="Calculate">Calculate</button>
+            <button onclick="vsaHemiSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
+            <button onclick="vsaHemiSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
+            <p id="vsaHemiResult" class="result"></p>
+
+            	<h3>Rectangular Prism</h3>
+            	<h4 class="equation"><i>V = lwh, SA = 2(lw + lh + wh)</i></h4>
+            <p>l:
+                <input id="vsaRectL" type="number" placeholder="length">
+            </p>
+            <p>w:
+                <input id="vsaRectW" type="number" placeholder="width">
+            </p>
+            <p>h:
+                <input id="vsaRectH" type="number" placeholder="height">
+            </p>
+            <button onclick="vsaRectSolve()" title="Calculate">Calculate</button>
+            <p id="vsaRectResult" class="result"></p>
+
+            <a name="Trigonometry"></a>
+            	<h2>Trigenometric Ratios</h2>
+            	<h3>Sine, Cosine, Tangent</h3>
+            <p>theta:
+                <input id="trigTheta" type="number" placeholder="angle measure">
+            </p>
+            <button onclick="trigSolveDeg()" title="If you entered an angle measure in degrees">Calculate for theta degrees</button>
+            <button onclick="trigSolveRad()" title="If you entered an angle measure in radians">Calculate for theta radians</button>
+            <p id="trigSinResult" class="result"></p>
+            <p id="trigCosResult" class="result"></p>
+            <p id="trigTanResult" class="result"></p>
+
+            	<h3>Arc (Inverse) Sine</h3>
+            <p>Sine of theta:
+                <input id="trigSin" type="number" placeholder="sine of an angle">
+            </p>
+            <button onclick="trigAsinSolve()" title="Calculate">Calculate</button>
+            <p id="trigAsinResult" class="result"></p>
+
+            	<h3>Arc (Inverse) Cosine</h3>
+            <p>Cosine of theta:
+                <input id="trigCos" type="number" placeholder="cosine of an angle">
+            </p>
+            <button onclick="trigAcosSolve()" title="Calculate">Calculate</button>
+            <p id="trigAcosResult" class="result"></p>
+
+            	<h3>Arc (Inverse) Tangent</h3>
+            <p>Tangent of theta:
+                <input id="trigTan" type="number" placeholder="tangent of a number">
+            </p>
+            <button onclick="trigAtanSolve()" title="Calculate">Calculate</button>
+            <p id="trigAtanResult" class="result"></p>
+
+            <a name="Algebra"></a>
+            	<h2>Quadratic Formula</h2>
+            	<h4 class="equation"><i>x = <sup>(-b&plusmn;&radic;(b<sup>2</sup>-4ac))</sup>&frasl;<sub>2a</sub></i></h4>
+            <p>a:
+                <input id="quadA" type="number" placeholder="coefficient of x^2">
+            </p>
+            <p>b:
+                <input id="quadB" type="number" placeholder="coefficient of x">
+            </p>
+            <p>c:
+                <input id="quadC" type="number" placeholder="constant">
+            </p>
+            <button onclick="quadSolve()" title="Calculate">Calculate</button>
+            <p id="quadResult" class="result"></p>
+
+            	<h2>Geometric Mean</h2>
+            	<h4 class="equation"><i><sup>a</sup>&frasl;<sub>x</sub> = <sup>x</sup>&frasl;<sub>b</sub> or x = &radic;ab</i></h4>
+            <p>a:
+                <input id="geoMeanA" type="number" placeholder="a">
+            </p>
+            <p>b:
+                <input id="geoMeanB" type="number" placeholder="b">
+            </p>
+            <button onclick="geoMeanSolve()" title="Calculate">Calculate</button>
+            <p id="geoMeanResult" class="result"></p>
+
+            	<h2>Distance & Midpoint</h2>
+            	<h4 class="equation"><i>d = &radic;((x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>), mp = (<sup>x<sub>1</sub> + x<sub>2</sub></sup>&frasl;<sub>2</sub> , <sup>y<sub>1</sub> + y<sub>2</sub></sup>&frasl;<sub>2</sub>)</i></h4>
+            <p>x<sub>1</sub>:
+                <input id="dmpX1" type="number" placeholder="x of first coordinate">
+            </p>
+            <p>y<sub>1</sub>:
+                <input id="dmpY1" type="number" placeholder="y of first coordinate">
+            </p>
+            <p>x<sub>2</sub>:
+                <input id="dmpX2" type="number" placeholder="x of second coordinate">
+            </p>
+            <p>y<sub>2</sub>:
+                <input id="dmpY2" type="number" placeholder="y of second coordinate">
+            </p>
+            <button onclick="dmpSolve()" title="Calculate">Calculate</button>
+            <p id="dmpResult" class="result"></p>
+
+             <h2>Pythagorean Triple Generator</h2>
+            <p>Enter any whole number here:
+                <input id="pythagGenA" type="number" placeholder="whole number">
+            </p>
+            <p>and here:
+                <input id="pythagGenB" type="number" placeholder="whole number">
+            </p>
+            <button onclick="pythagGenSolve()" title="Calculate">Calculate</button>
+            <p id="pythagGenResult" class="result"></p>
+
+            <a name="Physics"></a>
+             <h2>Gravitational Force</h2>
+             <h4 class="equation"><i>F<sub>g</sub>=<sup>Gm<sub>1</sub>m<sub>2</sub></sup>&frasl;<sub>r<sup>2</sup></sub></i></h4>
+            <p>m<sub>1</sub>:
+                <input id="gravM1" type="number" placeholder="mass of object 1 (kg)">
+            </p>
+            <p>m<sub>1</sub>:
+                <input id="gravM2" type="number" placeholder="mass of object 2 (kg)">
+            </p>
+            <p>r:
+                <input id="gravR" type="number" placeholder="distance (m)">
+            </p>
+            <button onclick="gravSolve()" title="Calculate">Calculate</button>
+            <p id="gravResult" class="result"></p>
+
+             <h2>Kinetic Energy</h2>
+             <h4 class="equation"><i>K=&frac12;mv<sup>2</sup></i></h4>
+            <p>m:
+                <input id=kineticM type="number" placeholder="mass">
+            </p>
+            <p>v:
+                <input id=kineticV type="number" placeholder="velocity">
+            </p>
+            <button onclick="kineticSolve()" title="Calculate">Calculate</button>
+            <p id="kineticResult" class="result"></p>
+        </div>
+
+        <!--ALL THE "TOP" BUTTON CODE IS FROM W3SCHOOLS-->
+        <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+
+        <footer>&copy; 2017 Andrew Martinez, All rights reserved | <a href="mailto:a33819@student.ghchs.com" title="email the creator of all this">a33819@student.ghchs.com</a>
+        </footer>
+    </body>
+
+</html>
