@@ -1,4 +1,3 @@
-//NOTE TO SELF: DO NOT FORMAT SCRIPT.JS!!! IT SCREWS UP THE RESULTS WITH MULTIPLE ANSWERS BEACUSE EDITEY DOESN'T KNOW ABOUT `${var}` FORMAT!!!
 function pythagSolve() {
     var pythagA = document.getElementById("pythagA").value;
     var pythagB = document.getElementById("pythagB").value;
@@ -217,7 +216,7 @@ function vsaRectSolve() {
     var volRectResult = vsaRectL * vsaRectW * vsaRectH;
     var saRectResult = 2 * ((vsaRectL * vsaRectW) * 1 + (vsaRectL * vsaRectH) * 1 + (vsaRectW * vsaRectH) * 1);
 
-    document.getElementById("vsaRectResult").innerHTML = ``;
+    document.getElementById("vsaRectResult").innerHTML = `V= ${volRectResult}, SA= ${saRectResult}`;
 }
 
 function trigSolveDeg() {
@@ -226,9 +225,9 @@ function trigSolveDeg() {
     var trigCosResultDeg = Math.cos((Math.PI / 180) * trigTheta);
     var trigTanResultDeg = Math.tan((Math.PI / 180) * trigTheta);
 
-    document.getElementById("trigSinResult").innerHTML = 'Sine: ' + trigSinResultDeg;
-    document.getElementById("trigCosResult").innerHTML = 'Cosine: ' + trigCosResultDeg;
-    document.getElementById("trigTanResult").innerHTML = 'Tangent: ' + trigTanResultDeg;
+    document.getElementById("trigSinResult").innerHTML = `Sine: ${trigSinResultDeg}`;
+    document.getElementById("trigCosResult").innerHTML = `Cosine: ${trigCosResultDeg}`;
+    document.getElementById("trigTanResult").innerHTML = `Tangent: ${trigTanResultDeg}`;
 }
 
 function trigSolveRad() {
@@ -237,9 +236,9 @@ function trigSolveRad() {
     var trigCosResultRad = Math.cos(trigTheta);
     var trigTanResultRad = Math.tan(trigTheta);
 
-    document.getElementById("trigSinResult").innerHTML = 'Sine: ' + trigSinResultRad;
-    document.getElementById("trigCosResult").innerHTML = 'Cosine: ' + trigCosResultRad;
-    document.getElementById("trigTanResult").innerHTML = 'Tangent: ' + trigTanResultRad;
+    document.getElementById("trigSinResult").innerHTML = `Sine: ${trigSinResultRad}`;
+    document.getElementById("trigCosResult").innerHTML = `Cosine: ${trigCosResultRad}`;
+    document.getElementById("trigTanResult").innerHTML = `Tangent: ${trigTanResultRad}`;
 }
 
 function trigAsinSolve() {
@@ -247,7 +246,7 @@ function trigAsinSolve() {
     var trigAsinResultRad = Math.asin(trigSin);
     var trigAsinResultDeg = (180 / Math.PI) * trigAsinResultRad;
 
-    document.getElementById("trigAsinResult").innerHTML = 'Theta= ' + trigAsinResultRad + ' radians or ' + trigAsinResultDeg + ' Degrees';
+    document.getElementById("trigAsinResult").innerHTML = `Theta= ${trigAsinResultRad} radians or ${trigAsinResultDeg} degrees`
 }
 
 function trigAcosSolve() {
@@ -255,7 +254,7 @@ function trigAcosSolve() {
     var trigAcosResultRad = Math.acos(trigCos);
     var trigAcosResultDeg = (180 / Math.PI) * trigAcosResultRad;
 
-    document.getElementById("trigAcosResult").innerHTML = 'Theta= ' + trigAcosResultRad + ' radians or ' + trigAcosResultDeg + ' Degrees';
+    document.getElementById("trigAcosResult").innerHTML = `Theta= ${trigAcosResultRad} radians or ${trigAcosResultDeg} degrees`
 }
 
 function trigAtanSolve() {
@@ -263,7 +262,7 @@ function trigAtanSolve() {
     var trigAtanResultRad = Math.atan(trigTan);
     var trigAtanResultDeg = (180 / Math.PI) * trigAtanResultRad;
 
-    document.getElementById("trigAtanResult").innerHTML = 'Theta= ' + trigAtanResultRad + ' radians or ' + trigAtanResultDeg + ' Degrees';
+    document.getElementById("trigAtanResult").innerHTML = `Theta= ${trigAtanResultRad} radians or ${trigAtanResultDeg} degrees`
 }
 
 function quadSolve() {
@@ -277,11 +276,11 @@ function quadSolve() {
     var quadResultVertexY = (quadA * Math.pow(quadResultVertexX, 2)) + (quadB * quadResultVertexX) + (quadC * 1);
 
     if (quadResultDisc == 0) {
-        document.getElementById("quadResult").innerHTML = 'Root is ' + quadResultRootPos + ', the vertex is (' + quadResultVertexX + ', ' + quadResultVertexY + '), and the discriminant is ' + quadResultDisc;
+        document.getElementById("quadResult").innerHTML = `Root is ${quadResultRootPos}, the vertex is (${quadResultVertexX}, ${quadResultVertexY}), and the discriminant is ${quadResultDisc}`;
     } else if (quadResultDisc < 0) {
-        document.getElementById("quadResult").innerHTML = 'No real roots, the vertex is (' + quadResultVertexX + ', ' + quadResultVertexY + '), and the discriminant is ' + quadResultDisc;
+        document.getElementById("quadResult").innerHTML = `No real roots, the vertex is (${quadResultVertexX}, ${quadResultVertexY}), and the discriminant is ${quadResultDisc}`;
     } else {
-        document.getElementById("quadResult").innerHTML = 'Roots are ' + quadResultRootPos + ' and ' + quadResultRootNeg + ', the vertex is (' + quadResultVertexX + ', ' + quadResultVertexY + '), and the discriminant is  ' + quadResultDisc;
+        document.getElementById("quadResult").innerHTML = `Roots are ${quadResultRootPos} and ${quadResultRootNeg}, the vertex is (${quadResultVertexX}, ${quadResultVertexY}), and the discriminant is ${quadResultDisc}`;
     }
 }
 
