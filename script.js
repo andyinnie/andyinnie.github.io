@@ -328,10 +328,19 @@ function gravSolve() {
 function kineticSolve() {
     var kineticM = document.getElementById("kineticM").value;
     var kineticV = document.getElementById("kineticV").value;
-    var kineticResult = 0.5 * kineticM * Math.pow(kineticV, 2)
+    var kineticResult = 0.5 * kineticM * Math.pow(kineticV, 2);
     
     document.getElementById("kineticResult").innerHTML = kineticResult;
 }
+
+function ePotSolve() {
+    var ePotK = document.getElementById("ePotK").value;
+    var ePotX = document.getElementById("ePotX").value;
+    var ePotResult = 0.5 * ePotK * Math.pow(ePotX, 2);
+    
+    document.getElementById("ePotResult").innerHTML = ePotResult;
+}
+    
 // When the user scrolls down 500px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
