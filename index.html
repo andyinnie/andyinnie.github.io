@@ -70,7 +70,6 @@
         </div>
         <noscript>
             <div id="noscript-header">
-
                 <img id="warning" src="https://cdn2.iconfinder.com/data/icons/freecns-cumulus/32/519791-101_Warning-128.png" alt="warning">
                 <p id="header-text">Sorry, you'll need JavaScript enabled on your browser to use these calculators.</p>
             </div>
@@ -78,10 +77,8 @@
 
         <div id="content">
             <a name="Geometry"></a>
-             <h2>Pythagorean Theorem</h2>
-            <!--<img id="right-triangle" src="http://emweb.unl.edu/Math/mathweb/trigonom/Image289.gif" title="Example of a right triangle">-->
-
-             <h4 class="equation"><i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i></h4>
+            <h2>Pythagorean Theorem</h2>
+            <h4 class="equation"><i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i></h4>
             <p>a:
                 <input id="pythagA" type="number" placeholder="leg">
             </p>
@@ -91,8 +88,8 @@
             <button onclick="pythagSolve()" title="Calculate">Calculate</button>
             <p id="pythagResult" class="result"></p>
 
-             <h3>or alternatively,</h3>
-             <h4 class="equation"><i>b<sup>2</sup> = c<sup>2</sup> - a<sup>2</sup></i></h4>
+            <h3>or alternatively,</h3>
+            <h4 class="equation"><i>b<sup>2</sup> = c<sup>2</sup> - a<sup>2</sup></i></h4>
             <p>a:
                 <input id="pythagAltA" type="number" placeholder="leg">
             </p>
@@ -102,9 +99,9 @@
             <button onclick="pythagAltSolve()" title="Calculate">Calculate</button>
             <p id="pythagAltResult" class="result"></p>
 
-             <h2>Areas</h2>
-             <h3>Trapezoid</h3>
-             <h4 class="equation"><i>A = &frac12;(b<sub>1</sub> + b<sub>2</sub>)h</i></h4>
+            <h2>Areas</h2>
+            <h3>Trapezoid</h3>
+            <h4 class="equation"><i>A = &frac12;(b<sub>1</sub> + b<sub>2</sub>)h</i></h4>
             <p>b<sub>1</sub>:
                 <input id="areaTrapB1" type="number" placeholder="base">
             </p>
@@ -117,19 +114,20 @@
             <button onclick="areaTrapSolve()" title="Calculate">Calculate</button>
             <p id="areaTrapResult" class="result"></p>
 
-             <h3>Circle</h3>
-             <h4 class="equation"><i>A = &Pi;r<sup>2</sup></i></h4>
+            <h3>Circle</h3>
+            <h4 class="equation"><i>A = &Pi;r<sup>2</sup></i></h4>
             <p>r:
                 <input id="areaCircleR" type="number" placeholder="radius">
             </p>
             <button onclick="areaCircleSolvePI()" title="Calculate">Calculate</button>
             <button onclick="areaCircleSolve314()" title="If you are asked to use 3.14 instead of pi">Calculate using 3.14</button>
             <button onclick="areaCircleSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
-            <!--these three buttons appear on the same line (a surprise to be sure, but a welcome one)(haha, memes)-->
+            <!--these three buttons appear on the same line (a surprise to be sure, but a welcome one)(haha, memes)
+            future me here - of course they would was I fkin stupid-->
             <p id="areaCircleResult" class="result"></p>
 
-             <h4>also, Circumference of a Circle</h4>
-             <h4 class="equation"><i>C = 2&Pi;r</i></h4>
+            <h4>also, Circumference of a Circle</h4>
+            <h4 class="equation"><i>C = 2&Pi;r</i></h4>
             <p>r:
                 <input id="perimCircleR" type="number" placeholder="radius">
             </p>
@@ -138,8 +136,8 @@
             <button onclick="perimCircleSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="perimCircleResult" class="result"></p>
 
-             <h3>Radius of a Circle From Circumference</h3>
-             <h4 class="equation"><i>r = <sup>C</sup>&frasl;<sub>2&Pi;</sub></i></h4>
+            <h3>Radius of a Circle From Circumference</h3>
+            <h4 class="equation"><i>r = <sup>C</sup>&frasl;<sub>2&Pi;</sub></i></h4>
             <p>C:
                 <input id="radiusFromPerimC" type="number" placeholder="circumference">
             </p>
@@ -148,8 +146,8 @@
             <button onclick="radiusFromPerimSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="radiusFromPerimResult" class="result"></p>
 
-             <h3>Radius of a Circle From Area</h3>
-             <h4 class="equation"><i>r = &radic;<sup>A</sup>&frasl;<sub>&Pi;</sub></i></h4>
+            <h3>Radius of a Circle From Area</h3>
+            <h4 class="equation"><i>r = &radic;<sup>A</sup>&frasl;<sub>&Pi;</sub></i></h4>
             <p>A:
                 <input id="radiusFromAreaA" type="number" placeholder="area">
             </p>
@@ -158,9 +156,9 @@
             <button onclick="radiusFromAreaSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="radiusFromAreaResult" class="result"></p>
 
-             <h2>Volumes &amp; Surface Areas</h2>
-            	<h3>Cone</h3>
-            	<h4 class="equation"><i>V = &frac13;&Pi;r<sup>2</sup>h, SA = &Pi;r<sup>2</sup> + &Pi;r&radic;(r<sup>2</sup> + h<sup>2</sup>)</i></h4>
+            <h2>Volumes &amp; Surface Areas</h2>
+            <h3>Cone</h3>
+            <h4 class="equation"><i>V = &frac13;&Pi;r<sup>2</sup>h, SA = &Pi;r<sup>2</sup> + &Pi;r&radic;(r<sup>2</sup> + h<sup>2</sup>)</i></h4>
             <p>r:
                 <input id="vsaConeR" type="number" placeholder="radius">
             </p>
@@ -172,8 +170,8 @@
             <button onclick="vsaConeSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="vsaConeResult" class="result"></p>
 
-            	<h3>Cylinder</h3>
-            	<h4 class="equation"><i>V = &Pi;r<sup>2</sup>h, SA = 2&Pi;r<sup>2</sup> + 2&Pi;rh</i></h4>
+            <h3>Cylinder</h3>
+            <h4 class="equation"><i>V = &Pi;r<sup>2</sup>h, SA = 2&Pi;r<sup>2</sup> + 2&Pi;rh</i></h4>
             <p>r:
                 <input id="vsaCylR" type="number" placeholder="radius">
             </p>
@@ -185,8 +183,8 @@
             <button onclick="vsaCylSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="vsaCylResult" class="result"></p>
 
-            	<h3>Sphere</h3>
-            	<h4 class="equation"><i>V = <sup>4</sup>&frasl;<sub>3</sub>&Pi;r<sup>3</sup>, SA = 4&Pi;r<sup>2</sup></i></h4>
+            <h3>Sphere</h3>
+            <h4 class="equation"><i>V = <sup>4</sup>&frasl;<sub>3</sub>&Pi;r<sup>3</sup>, SA = 4&Pi;r<sup>2</sup></i></h4>
             <p>r:
                 <input id="vsaSphereR" type="number" placeholder="radius">
             </p>
@@ -195,8 +193,8 @@
             <button onclick="vsaSphereSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="vsaSphereResult" class="result"></p>
 
-             <h3>Hemisphere</h3>
-             <h4 class="equation"><i>V = <sup>2</sup>&frasl;<sub>3</sub>&Pi;r<sup>3</sup>, SA = 3&Pi;r<sup>2</sup></i></h4>
+            <h3>Hemisphere</h3>
+            <h4 class="equation"><i>V = <sup>2</sup>&frasl;<sub>3</sub>&Pi;r<sup>3</sup>, SA = 3&Pi;r<sup>2</sup></i></h4>
             <p>r:
                 <input id="vsaHemiR" type="number" placeholder="radius">
             </p>
@@ -205,8 +203,8 @@
             <button onclick="vsaHemiSolve227()" title="If you are asked to use 22/7 instead of pi">Calculate using 22/7</button>
             <p id="vsaHemiResult" class="result"></p>
 
-            	<h3>Rectangular Prism</h3>
-            	<h4 class="equation"><i>V = lwh, SA = 2(lw + lh + wh)</i></h4>
+            <h3>Rectangular Prism</h3>
+            <h4 class="equation"><i>V = lwh, SA = 2(lw + lh + wh)</i></h4>
             <p>l:
                 <input id="vsaRectL" type="number" placeholder="length">
             </p>
@@ -220,8 +218,8 @@
             <p id="vsaRectResult" class="result"></p>
 
             <a name="Trigonometry"></a>
-            	<h2>Trigenometric Ratios</h2>
-            	<h3>Sine, Cosine, Tangent</h3>
+            <h2>Trigenometric Ratios</h2>
+            <h3>Sine, Cosine, Tangent</h3>
             <p>theta:
                 <input id="trigTheta" type="number" placeholder="angle measure">
             </p>
@@ -231,21 +229,21 @@
             <p id="trigCosResult" class="result"></p>
             <p id="trigTanResult" class="result"></p>
 
-            	<h3>Arc (Inverse) Sine</h3>
+            <h3>Arc (Inverse) Sine</h3>
             <p>Sine of theta:
                 <input id="trigSin" type="number" placeholder="sine of an angle">
             </p>
             <button onclick="trigAsinSolve()" title="Calculate">Calculate</button>
             <p id="trigAsinResult" class="result"></p>
 
-            	<h3>Arc (Inverse) Cosine</h3>
+            <h3>Arc (Inverse) Cosine</h3>
             <p>Cosine of theta:
                 <input id="trigCos" type="number" placeholder="cosine of an angle">
             </p>
             <button onclick="trigAcosSolve()" title="Calculate">Calculate</button>
             <p id="trigAcosResult" class="result"></p>
 
-            	<h3>Arc (Inverse) Tangent</h3>
+            <h3>Arc (Inverse) Tangent</h3>
             <p>Tangent of theta:
                 <input id="trigTan" type="number" placeholder="tangent of a number">
             </p>
@@ -253,8 +251,8 @@
             <p id="trigAtanResult" class="result"></p>
 
             <a name="Algebra"></a>
-            	<h2>Quadratic Formula</h2>
-            	<h4 class="equation"><i>x = <sup>(-b&plusmn;&radic;(b<sup>2</sup>-4ac))</sup>&frasl;<sub>2a</sub></i></h4>
+            <h2>Quadratic Formula</h2>
+            <h4 class="equation"><i>x = <sup>(-b&plusmn;&radic;(b<sup>2</sup>-4ac))</sup>&frasl;<sub>2a</sub></i></h4>
             <p>a:
                 <input id="quadA" type="number" placeholder="coefficient of x^2">
             </p>
@@ -267,8 +265,8 @@
             <button onclick="quadSolve()" title="Calculate">Calculate</button>
             <p id="quadResult" class="result"></p>
 
-            	<h2>Geometric Mean</h2>
-            	<h4 class="equation"><i><sup>a</sup>&frasl;<sub>x</sub> = <sup>x</sup>&frasl;<sub>b</sub> or x = &radic;ab</i></h4>
+            <h2>Geometric Mean</h2>
+            <h4 class="equation"><i><sup>a</sup>&frasl;<sub>x</sub> = <sup>x</sup>&frasl;<sub>b</sub> or x = &radic;ab</i></h4>
             <p>a:
                 <input id="geoMeanA" type="number" placeholder="a">
             </p>
@@ -278,8 +276,8 @@
             <button onclick="geoMeanSolve()" title="Calculate">Calculate</button>
             <p id="geoMeanResult" class="result"></p>
 
-            	<h2>Distance &amp; Midpoint</h2>
-            	<h4 class="equation"><i>d = &radic;((x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>), mp = (<sup>x<sub>1</sub> + x<sub>2</sub></sup>&frasl;<sub>2</sub> , <sup>y<sub>1</sub> + y<sub>2</sub></sup>&frasl;<sub>2</sub>)</i></h4>
+            <h2>Distance &amp; Midpoint</h2>
+            <h4 class="equation"><i>d = &radic;((x<sub>2</sub> - x<sub>1</sub>)<sup>2</sup> + (y<sub>2</sub> - y<sub>1</sub>)<sup>2</sup>), mp = (<sup>x<sub>1</sub> + x<sub>2</sub></sup>&frasl;<sub>2</sub> , <sup>y<sub>1</sub> + y<sub>2</sub></sup>&frasl;<sub>2</sub>)</i></h4>
             <p>x<sub>1</sub>:
                 <input id="dmpX1" type="number" placeholder="x of first coordinate">
             </p>
@@ -295,7 +293,7 @@
             <button onclick="dmpSolve()" title="Calculate">Calculate</button>
             <p id="dmpResult" class="result"></p>
 
-             <h2>Pythagorean Triple Generator</h2>
+            <h2>Pythagorean Triple Generator</h2>
             <p>Enter any whole number here:
                 <input id="pythagGenA" type="number" placeholder="whole number">
             </p>
@@ -306,8 +304,8 @@
             <p id="pythagGenResult" class="result"></p>
 
             <a name="Physics"></a>
-             <h2>Gravitational Force</h2>
-             <h4 class="equation"><i>F<sub>g</sub>=<sup>Gm<sub>1</sub>m<sub>2</sub></sup>&frasl;<sub>r<sup>2</sup></sub></i></h4>
+            <h2>Gravitational Force</h2>
+            <h4 class="equation"><i>F<sub>g</sub>=<sup>Gm<sub>1</sub>m<sub>2</sub></sup>&frasl;<sub>r<sup>2</sup></sub></i></h4>
             <p>m<sub>1</sub>:
                 <input id="gravM1" type="number" placeholder="mass of object 1 (kg)">
             </p>
@@ -320,16 +318,28 @@
             <button onclick="gravSolve()" title="Calculate">Calculate</button>
             <p id="gravResult" class="result"></p>
 
-             <h2>Kinetic Energy</h2>
-             <h4 class="equation"><i>K=&frac12;mv<sup>2</sup></i></h4>
+            <h2>Kinetic Energy</h2>
+            <h4 class="equation"><i>K=&frac12;mv<sup>2</sup></i></h4>
             <p>m:
-                <input id=kineticM type="number" placeholder="mass">
+                <input id="kineticM" type="number" placeholder="mass">
             </p>
             <p>v:
-                <input id=kineticV type="number" placeholder="velocity">
+                <input id="kineticV" type="number" placeholder="velocity">
             </p>
             <button onclick="kineticSolve()" title="Calculate">Calculate</button>
             <p id="kineticResult" class="result"></p>
+            
+            <h2>Elastic Potential Energy</h2>
+            <h4 class="equation"><i>U<sub>s</sub>=&frac12;kx<sup>2</sup></i></h4>
+            <p>k: 
+                <input id="ePotK" type="number" placeholder="spring constant">
+            </p>
+            <p>x: 
+                <input id="ePotX" type="number" placeholder="stretch distance">
+            </p>
+            <button onclick="ePotSolve()" title="Calculate">Calculate</button>
+            <p id="ePotResult" class="result"></p>
+            
         </div>
 
         <!--ALL THE "TOP" BUTTON CODE IS FROM W3SCHOOLS-->
