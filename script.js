@@ -339,6 +339,15 @@ function ePotSolve() {
     
     document.getElementById("ePotResult").innerHTML = ePotResult;
 }
+
+function gPotSolve() {
+    var gPotM = document.getElementById("gPotM").value;
+    var gPotG = document.getElementById("gPotG").value;
+    var gPotH = document.getElementById("gPotH").value;
+    var gPotResult = gPotM * gPotG * gPotH;
+    
+    document.getElementById("gPotResult").innerHTML = gPotResult;
+}
     
 // When the user scrolls down 500px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
