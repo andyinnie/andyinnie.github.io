@@ -348,7 +348,16 @@ function gPotSolve() {
     
     document.getElementById("gPotResult").innerHTML = gPotResult;
 }
+
+function cAccSolve() {
+    var cAccV = document.getElementById("cAccV").value;
+    var cAccR = document.getElementById("cAccR").value;
+    var cAccResult = (Math.pow(cAccV, 2) / cAccR);
     
+    document.getElementById("cAccResult").innerHTML = cAccResult;
+}
+
+   
 // When the user scrolls down 500px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
 
