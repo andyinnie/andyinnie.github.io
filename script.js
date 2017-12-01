@@ -14,6 +14,13 @@ function pythagAltSolve() {
     document.getElementById("pythagAltResult").innerHTML = pythagAltResult;
 }
 
+function pythagAlt2Solve() {
+    var pythagAlt2C = document.getElementById("pythagAlt2C").value;
+    var pythagAlt2Result = pythagAlt2C / Math.sqrt(2);
+    
+    document.getElementById("pythagAlt2Result").innerHTML = pythagAlt2Result;
+}
+
 function areaTrapSolve() {
     var areaTrapB1 = document.getElementById("areaTrapB1").value;
     var areaTrapB2 = document.getElementById("areaTrapB2").value;
