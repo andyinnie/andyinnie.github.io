@@ -364,6 +364,15 @@ function cAccSolve() {
     document.getElementById("cAccResult").innerHTML = cAccResult;
 }
 
+function workSolve() {
+  var workF = document.getElementById("workF").value;
+  var workD= document.getElementById("workD").value;
+  var workTheta= document.getElementById("workTheta").value;
+  var workResult = workF * workD * Math.cos((Math.PI / 180) * workTheta);
+  
+  document.getElementById("workResult").innerHTML = workResult;
+}
+
 /*
   function Solve() {
   var = document.getElementById("").value;
