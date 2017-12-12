@@ -364,6 +364,16 @@ function cAccSolve() {
     document.getElementById("cAccResult").innerHTML = cAccResult;
 }
 
+/*
+  function Solve() {
+  var = document.getElementById("").value;
+  var = document.getElementById("").value;
+  var Result = [math here];
+  
+  document.getElementById("Result").innerHTML = Result;
+}
+*/
+
    
 // When the user scrolls down 500px from the top of the document, show the button
 window.onscroll = function() {scrollFunction()};
