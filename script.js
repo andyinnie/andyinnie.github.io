@@ -322,6 +322,14 @@ function pythagGenSolve() {
     document.getElementById("pythagGenResult").innerHTML = pythagGenResult1 + ', ' + pythagGenResult2 + ', ' + pythagGenResult3;
 }
 
+  function expSolve() {
+  var expA = document.getElementById("expA").value;
+  var expB = document.getElementById("expB").value;
+  var expN = document.getElementById("expN").value;
+  var expResult = expA * Math.pow(expB, expN);
+  
+  document.getElementById("expResult").innerHTML = expResult;
+
 function gravSolve() {
     var gravM1 = document.getElementById("gravM1").value;
     var gravM2 = document.getElementById("gravM2").value;
