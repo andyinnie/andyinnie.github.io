@@ -326,7 +326,7 @@ function expSolve() {
   var expA = document.getElementById("expA").value;
   var expB = parseInt(document.getElementById("expB").value);
   var expN = document.getElementById("expN").value;
-  var expResult = expA * Math.pow((1 + (1 * expB)), expN);
+  var expResult = expA * Math.pow((1 + parseInt(expB)), expN);
   
   document.getElementById("expResult").innerHTML = expResult;
 }
