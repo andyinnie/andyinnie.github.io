@@ -324,9 +324,9 @@ function pythagGenSolve() {
 
 function expSolve() {
   var expA = document.getElementById("expA").value;
-  var expB = number(document.getElementById("expB").value);
+  var expB = parseFloat(document.getElementById("expB").value);
   var expN = document.getElementById("expN").value;
-  var expResult = expA * Math.pow((1 + 1 * expB), expN);
+  var expResult = expA * Math.pow((1 + parseFloat(expB)), expN);
   
   document.getElementById("expResult").innerHTML = expResult;
 }
