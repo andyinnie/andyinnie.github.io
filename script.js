@@ -382,6 +382,14 @@ function workSolve() {
   document.getElementById("workResult").innerHTML = workResult;
 }
 
+function electroForceSolve() {
+  var electroForceQ1 = document.getElementById("electroForceQ1").value;
+  var electroForceQ2 = document.getElementById("electroForceQ2").value;
+  var electroForceR = document.getElementById("electroForceR").value;
+  var electroForceResult = 9000000000 * ((electroForceQ1 * electroForceQ2) / (Math.pow(electroForceR, 2)));
+  
+  document.getElementById("electroForceResult").innerHTML = electroForceResult;
+}
 /*
   function Solve() {
   var = document.getElementById("").value;
