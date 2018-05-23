@@ -72,6 +72,9 @@ input[type="number"] {
     max-width: 150px;
     text-align: left;
 }
+iframe {
+    width: 85%;
+}
 #myBtn {
     display: none;
     position: fixed;
