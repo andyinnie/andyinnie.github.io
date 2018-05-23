@@ -80,6 +80,11 @@ input[type="number"] {
     margin: 25px 15% 5px 15%;
     padding: 5px 0 4px 0;
 }
+#footer-exp {
+    width: 70%;
+    min-width: 950px;
+    margin: 0 15%;
+}
 iframe {
     width: 940px;
     height: 400px;
