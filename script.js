@@ -390,6 +390,13 @@ function electroForceSolve() {
   
   document.getElementById("electroForceResult").innerHTML = electroForceResult;
 }
+
+function absorbSolve() {
+  var absorbT = document.getElementById("absorbT").value;
+  var absorbResult = (-1) * Math.log(absorbT) / Math.log(10);
+  
+  document.getElementById("absorbResult").innerHTML = absorbResult;
+}
 /*
   function Solve() {
   var = document.getElementById("").value;
