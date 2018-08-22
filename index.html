@@ -33,10 +33,11 @@
 
     <body>
         <div id="menu">
-             <a href="#Geometry"><span class="menu-item">Geometry</span></a>
-             <a href="#Trigonometry"><span class="menu-item">Trigonometry</span></a>
-             <a href="#Algebra"><span class="menu-item">Algebra</span></a>
-             <a href="#Physics"><span class="menu-item">Physics</span></a>
+            <a href="#Geometry"><span class="menu-item">Geometry</span></a>
+            <a href="#Trigonometry"><span class="menu-item">Trigonometry</span></a>
+            <a href="#Algebra"><span class="menu-item">Algebra</span></a>
+            <a href="#Physics"><span class="menu-item">Physics</span></a>
+            <a href="#Chemistry"><span class="menu-item">Chemistry</span></a>
         </div>
         <!-- I got these buttons from simplesharebuttons.com -->
         <div id="share-buttons">
@@ -414,6 +415,16 @@
             </p>
             <button onclick="electroForceSolve()" title="Calculate">Calculate</button>
             <p id="electroForceResult" class="result"></p>
+            
+            <a name="Chemistry"></a>
+            <h2>Absorbance</h2>
+            <h4 class="equation"><i>A = -log<sub>10</sub>T</i></h4>
+            <p>T: 
+                <input id="absorbT" type="number" placeholder="transmittance">
+            </p>
+            <button onclick="absorbSolve()" title="Calculate">Calculate</button>
+            <p id="absorbResult" class="result"></p>
+            
             
         </div>
         <!--
