@@ -393,7 +393,7 @@ function electroForceSolve() {
 
 function absorbSolve() {
   var absorbT = document.getElementById("absorbT").value;
-  var absorbResult = (-1) * Math.log(absorbT) / Math.log(10);
+  var absorbResult = (-1) * Math.log(1 / absorbT) / Math.log(10);
   
   document.getElementById("absorbResult").innerHTML = absorbResult;
 }
